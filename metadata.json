@@ -1,0 +1,6 @@
+{
+  "name": "الفاطمة نيو — كاشير",
+  "description": "Al-Fatema New Cashier - Professional and complete Android POS System with RTL primary support, sales management, product scanning, and offline hold functions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

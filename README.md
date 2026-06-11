@@ -1,137 +1,21 @@
-[README.md](https://github.com/user-attachments/files/28820748/README.md)
-# الفاطمة نيو — تطبيق الكاشير
-### Al-Fatema New — Android POS Cashier App
-
 <div align="center">
-
-![Version](https://img.shields.io/badge/version-1.0.0-green)
-![Android](https://img.shields.io/badge/Android-8.0%2B-brightgreen)
-![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-blue)
-![License](https://img.shields.io/badge/license-Private-red)
-
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
----
+# Run and deploy your AI Studio app
 
-## 📱 نبذة عن التطبيق
+This contains everything you need to run your app locally.
 
-تطبيق أندرويد احترافي لنقاط البيع (POS) مرتبط ببرنامج **الفاطمة نيو للمبيعات** عبر API محلي على الشبكة.  
-يتيح للكاشير إجراء عمليات البيع الكاملة من الهاتف أو الجهاز اللوحي.
+View your app in AI Studio: https://ai.studio/apps/5d12993c-2544-42cd-8517-664ec57a68fa
 
----
+## Run Locally
 
-## ✨ المميزات
+**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
 
-- 🔍 بحث المنتجات بالباركود أو الاسم
-- 🧾 إنشاء فواتير مرتبطة مباشرة بقاعدة البيانات
-- ⏸ تعليق الفواتير واستردادها
-- 👤 بحث العملاء وربطهم بالفاتورة
-- 💳 دعم طرق دفع متعددة (كاش / شبكة / آجل)
-- 🖨 طباعة إيصال على طابعة حرارية Bluetooth (58mm)
-- 🌙 وضع ليلي (Dark Mode)
-- 🌐 دعم العربية والإنجليزية (RTL/LTR)
 
----
-
-## 🔗 الـ API المستخدم
-
-يتصل التطبيق بالسيرفر المحلي عبر:
-
-| Method | Endpoint | الوصف |
-|--------|----------|-------|
-| GET | `/api/invoice/newnumber` | رقم فاتورة جديد |
-| POST | `/api/invoice/save` | حفظ الفاتورة |
-| GET | `/api/product/{barcode}` | جلب منتج بالباركود |
-| GET | `/api/product/search?name=` | بحث منتجات |
-| GET | `/api/product/categories` | قائمة التصنيفات |
-| GET | `/api/customer/all` | كل العملاء |
-| GET | `/api/customer/search?q=` | بحث عميل |
-
----
-
-## ⚙️ الإعداد
-
-### المتطلبات
-- Android 8.0 (API 26) أو أعلى
-- الاتصال بنفس شبكة WiFi الخاصة بالسيرفر
-- تشغيل برنامج **الفاطمة نيو للمبيعات** على السيرفر
-
-### إعداد الاتصال
-1. افتح التطبيق → **الإعدادات**
-2. أدخل IP السيرفر (مثال: `192.168.1.10:54345`)
-3. اضغط **اختبار الاتصال**
-4. عند ظهور ✅ التطبيق جاهز للعمل
-
----
-
-## 🏗️ بناء المشروع
-
-```bash
-# استنساخ المستودع
-git clone https://github.com/your-username/alfatema-cashier.git
-
-# فتح في Android Studio
-# File → Open → اختر المجلد
-
-# بناء APK
-./gradlew assembleDebug
-```
-
-أو استخدم **GitHub Actions** — كل push يبني APK تلقائياً في تبويب Actions.
-
----
-
-## 📦 التقنيات المستخدمة
-
-| التقنية | الاستخدام |
-|---------|-----------|
-| Kotlin | لغة البرمجة الأساسية |
-| Jetpack Compose | واجهة المستخدم |
-| Material Design 3 | تصميم الواجهة |
-| Retrofit2 + OkHttp3 | الاتصال بالـ API |
-| Hilt | Dependency Injection |
-| DataStore | التخزين المحلي |
-| ML Kit | قراءة الباركود |
-| MVVM + Repository | هيكل المشروع |
-
----
-
-## 📁 هيكل المشروع
-
-```
-app/
-├── data/
-│   ├── model/          ← نماذج البيانات
-│   ├── api/            ← Retrofit Service
-│   └── repository/     ← مستودعات البيانات
-├── ui/
-│   ├── screens/        ← شاشات التطبيق
-│   ├── components/     ← مكونات قابلة لإعادة الاستخدام
-│   ├── theme/          ← الألوان والخطوط
-│   └── viewmodel/      ← ViewModels
-├── di/                 ← Hilt Modules
-├── util/               ← أدوات مساعدة
-└── MainActivity.kt
-```
-
----
-
-## 🔒 الأمان
-
-- لا يوجد بيانات حساسة مخزنة في الكود
-- عنوان السيرفر محفوظ في DataStore فقط
-- الاتصال يعمل على الشبكة المحلية فقط (LAN)
-
----
-
-## 👨‍💻 المطور
-
-**أبو فاطمة** — مطور برنامج الفاطمة نيو للمبيعات  
-Cairo, Egypt 🇪🇬
-
----
-
-## 📄 الترخيص
-
-هذا المشروع خاص ومرتبط ببرنامج الفاطمة نيو للمبيعات.  
-جميع الحقوق محفوظة © 2024
+1. Open Android Studio
+2. Select **Open** and choose the directory containing this project
+3. Allow Android Studio to fix any incompatibilities as it imports the project.
+4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
+5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
+6. Run the app on an emulator or physical device
